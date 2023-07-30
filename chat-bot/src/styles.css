@@ -1,0 +1,9 @@
+body {
+    background-image: url('map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  

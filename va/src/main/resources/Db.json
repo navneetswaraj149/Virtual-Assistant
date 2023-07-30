@@ -1,0 +1,62 @@
+[
+  {
+    "greeting": "Hi, I am ICE virtual assistant. You can select from the options given below:",
+    "responses": [
+      {
+        "id": 1,
+        "message": "Pull Rule Violations",
+        "intents": [
+          {
+            "id": 1,
+            "name": "Enter Duration and date in Format Duration-DD/MM/YYYY",
+            "actions": [
+              {
+                "name": "Enter the rules seperated by comma",
+                "intentId": "3-02/08/2012",
+                "rules": [
+                  {
+                    "id": "{]Lorem ipsum dolor,] \nsit amet consectetur [adipisicing elit. {Necessitatibus, voluptate dicta excepturi,\n dolore atque nihil, maxime modi molestiae saepe nam ut aliquam quidem optio\n quaerat impedit minus sunt? Eius neque quibusdam consequuntur eos fugit dolorem consectetur veritatis rerum pariatur animi.",
+                    "name": "1234,2645,8744"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "message": "provide timing for todays system refresh",
+        "intents": [
+          {
+            "id": 1,
+            "name": "enter the name of company",
+            "actions": [
+              {
+                "name": null,
+                "intentId": "fidelity",
+                "rules": [
+                  {
+                    "id": "1",
+                    "name": "6:02"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "message": "Others",
+        "intents": [
+          {
+            "id": 1,
+            "name": "We dont have response ryt now click on below link to create a service request https://github.com/navneetswaraj149",
+            "actions": []
+          }
+        ]
+      }
+    ]
+  }
+]

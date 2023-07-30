@@ -1,0 +1,175 @@
+
+.cont{
+  
+
+  width: 98%;
+  height: 85vh;
+}
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  border: 1px solid #c5c4c4;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-header {
+  margin-bottom: 10px;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message-content {
+  padding: 5px;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+}
+
+.intent-container,
+.action-container 
+.actions-container {
+  margin-bottom: 20px;
+}
+
+.intent-container h3,
+.actions-container h3 {
+  margin: 0;
+}
+
+.intent-container ul,
+.action-container ul {
+  padding: 0;
+  list-style: none;
+}
+
+.intent-container li,
+.action-container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.intent-box,
+.action-box {
+  padding: 5px;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 77vh;
+}
+
+.chat-messages {
+  flex-grow: 1;
+}
+
+.user-input-container {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  
+  
+}
+
+.user-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.send-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-container {
+  width: 35%;
+  height: 30%;
+  background-color: #e7e2e2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+.intent-container,
+.action-container,.actions-container {
+  width: 35%;
+  background-color: #e7e2e2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.message.user-message {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message.user-message .message-content {
+  background-color: #f2f2f2;
+}
+
+.message.user-message .message-text {
+  padding: 10px;
+}
+.option-effect {
+  background-color: rgb(199, 255, 199);
+}
+.action-container {
+  width: 35%;
+  background-color: #e7e2e2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  word-break: break-word;
+  max-width: 35%;
+}
+
+.action-box {
+  padding: 5px;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: normal;
+}
+
+
+
+
+
+

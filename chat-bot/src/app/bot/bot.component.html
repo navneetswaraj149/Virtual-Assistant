@@ -1,0 +1,122 @@
+
+<div class="cont">
+<div class="container">
+  <div class="chat-messages">
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>{{ greeting }}</h2>
+      </div>
+      <div class="chat-messages">
+        <div class="message" *ngFor="let response of responses; let i = index">
+          <div class="message-content">
+            <button class="intent-button"
+                    (click)="getResponseIntents(response.id)"
+                    [ngClass]="{'option-effect': isHoveredResponse === response.id}"
+                    (mouseenter)="isHoveredResponse = response.id"
+                    (mouseleave)="isHoveredResponse = null">
+              {{ i + 1 }}. {{ response.message }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="intent-container" *ngIf="intents.length > 0">
+      <ul>
+        <li *ngFor="let intent of intents; let i = index">
+          <ng-container *ngIf="selectedId1 !==3">
+            <button class="intent-button"
+                    (click)="getResponseActions(selectedId1, intent.id)"
+                    [ngClass]="{'option-effect': isHoveredIntent === intent.id}"
+                    (mouseenter)="isHoveredIntent = intent.id"
+                    (mouseleave)="isHoveredIntent = null">
+              {{ intent.name }}
+            </button>
+          </ng-container>
+          <ng-container *ngIf="selectedId1 === 3">
+            <span *ngIf="intent.link" [innerHTML]="sanitizeLink(intent.name)"></span>
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+    
+    
+    
+
+    <div class="action-container" *ngIf="showIntentContainer && selectedId1===1 && rules  ">
+      <ul>
+        <li *ngFor="let action of actions; let i = index">
+          <button class="action-button"
+            (click)="getResponseRules(selectedId1, selectedId2, rules)"
+            [ngClass]="{'option-effect': isHoveredIntent === action.name}"
+            (mouseenter)="isHoveredIntent = action.name"
+            (mouseleave)="isHoveredIntent = null">
+             {{ action.name }}
+          </button>
+        </li>
+      </ul>
+    </div>
+    
+  
+  
+    <div class="message user-message" *ngFor="let message of messages">
+      <div class="message-content">
+        <p class="message-text">{{ message.content }}</p>
+      </div>
+    </div>
+   
+  </div>
+  
+    
+
+    <div class="actions-container" *ngIf="name && selectedId1==2">
+      <ul>
+        <div class="action-box" >
+          <h4>{{ name }}</h4> 
+        </div>
+      </ul>
+    </div>
+
+    <div class="actions-container" *ngIf="name1">
+      <ul>
+        <div class="action-box">
+          <h4>{{name1}}</h4>
+        </div>
+      </ul>
+    </div>
+    
+    
+    
+
+  <div class="user-input-container">
+    <input class="user-input" type="text" placeholder="Type your query" [(ngModel)]="userInput" (blur)="checkFirstUserInput()">
+    <button class="send-button" (click)="sendMessage();getResponseRules(selectedId1,selectedId2,rules);getResponseRules2(selectedId1,selectedId2,rules,rules2)">Send</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
